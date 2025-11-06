@@ -245,6 +245,58 @@
       transform: translateX(5px);
     }
 
+    /* Documents Section */
+    .documents-list {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+    .documents-list li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 20px;
+      border-left: 6px solid #ffd700;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .documents-list li:hover {
+      background: #fff9e6;
+      transform: translateX(5px);
+    }
+    .doc-icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+    .doc-info {
+      flex: 1;
+    }
+    .doc-info h3 {
+      color: #0c8b8d;
+      margin-bottom: 5px;
+    }
+    .doc-info p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .doc-download {
+      background: #0c8b8d;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .doc-download:hover {
+      background: #00ffcc;
+      color: #000;
+    }
+
     /* Skills */
     .skills {
       display: flex;
@@ -312,6 +364,11 @@
         flex-wrap: wrap;
         justify-content: center;
       }
+      .documents-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
     }
   </style>
 </head>
@@ -323,6 +380,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#documents">Documents</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -391,6 +449,53 @@
       <li onclick="window.location.href='projects/calculator.html'">🔢 Simple Calculator</li>
       <li onclick="window.location.href='projects/portfolio.html'">🌐 Portfolio Website</li>
     </ol>
+  </section>
+
+  <!-- DOCUMENTS SECTION -->
+  <section id="documents">
+    <h2>Documents</h2>
+    <ul class="documents-list">
+      <li>
+        <div style="display: flex; align-items: center; flex: 1;">
+          <span class="doc-icon">📄</span>
+          <div class="doc-info">
+            <h3>Resume</h3>
+            <p>My updated resume with skills and experience</p>
+          </div>
+        </div>
+        <a href="pdfs/resume.pdf" class="doc-download" download>Download</a>
+      </li>
+      <li>
+        <div style="display: flex; align-items: center; flex: 1;">
+          <span class="doc-icon">📋</span>
+          <div class="doc-info">
+            <h3>Curriculum Vitae</h3>
+            <p>Detailed CV with academic and professional background</p>
+          </div>
+        </div>
+        <a href="pdfs/cv.pdf" class="doc-download" download>Download</a>
+      </li>
+      <li>
+        <div style="display: flex; align-items: center; flex: 1;">
+          <span class="doc-icon">🏆</span>
+          <div class="doc-info">
+            <h3>Certificates</h3>
+            <p>My achievements and certifications</p>
+          </div>
+        </div>
+        <a href="pdfs/certificates.pdf" class="doc-download" download>Download</a>
+      </li>
+      <li>
+        <div style="display: flex; align-items: center; flex: 1;">
+          <span class="doc-icon">📊</span>
+          <div class="doc-info">
+            <h3>Academic Transcript</h3>
+            <p>University grades and academic performance</p>
+          </div>
+        </div>
+        <a href="pdfs/transcript.pdf" class="doc-download" download>Download</a>
+      </li>
+    </ul>
   </section>
 
   <!-- EDUCATION -->
